@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import "./App.css";
 
 function App() {
@@ -371,10 +371,8 @@ function App() {
 
           <div className="features-grid">
 
- <div
-  className="feature-card"
-  onClick={() => setShowLogin(true)}
->              <div className="feature-icon purple">▦</div>
+            <div className="feature-card">
+              <div className="feature-icon purple">▦</div>
               <h3>Smart Dashboard</h3>
               <p>
                 Get a complete overview of attendance,
@@ -382,10 +380,8 @@ function App() {
               </p>
             </div>
 
-<div
-  className="feature-card"
-  onClick={() => setShowLogin(true)}
->              <div className="feature-icon blue">✓</div>
+            <div className="feature-card">
+              <div className="feature-icon blue">✓</div>
               <h3>Attendance Management</h3>
               <p>
                 Track attendance in real time and identify
@@ -393,10 +389,7 @@ function App() {
               </p>
             </div>
 
-        <div
-  className="feature-card"
-  onClick={() => setShowLogin(true)}
->
+            <div className="feature-card">
               <div className="feature-icon pink">✦</div>
               <h3>AI Academic Assistant</h3>
               <p>
@@ -405,10 +398,7 @@ function App() {
               </p>
             </div>
 
-         <div
-  className="feature-card"
-  onClick={() => setShowLogin(true)}
->
+            <div className="feature-card">
               <div className="feature-icon green">↗</div>
               <h3>Placements & Skills</h3>
               <p>
@@ -417,10 +407,7 @@ function App() {
               </p>
             </div>
 
-          <div
-  className="feature-card"
-  onClick={() => setShowLogin(true)}
->
+            <div className="feature-card">
               <div className="feature-icon orange">◫</div>
               <h3>Assignments & Exams</h3>
               <p>
@@ -429,10 +416,7 @@ function App() {
               </p>
             </div>
 
-         <div
-  className="feature-card"
-  onClick={() => setShowLogin(true)}
->
+            <div className="feature-card">
               <div className="feature-icon cyan">◎</div>
               <h3>Campus Community</h3>
               <p>
