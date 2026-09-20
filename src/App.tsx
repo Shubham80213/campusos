@@ -199,9 +199,9 @@ function App() {
       </nav>
 
       {/* HERO */}
-      <main>
-        {activePage === "attendance" ? (
+      <main>{activePage === "attendance" ? (
   <section className="section">
+
     <div className="section-heading">
       <div className="badge">ACADEMIC OVERVIEW</div>
 
@@ -214,6 +214,7 @@ function App() {
       </p>
     </div>
 
+    {/* ATTENDANCE SUMMARY */}
     <div className="features-grid">
 
       <div className="feature-card">
@@ -239,7 +240,11 @@ function App() {
 
     </div>
 
-    <div className="progress-card" style={{ marginTop: "30px" }}>
+    {/* OVERALL PROGRESS */}
+    <div
+      className="progress-card"
+      style={{ marginTop: "30px" }}
+    >
       <div className="card-title">
         <span>Overall Attendance</span>
         <span>82%</span>
@@ -248,6 +253,107 @@ function App() {
       <div className="progress-bar">
         <div style={{ width: "82%" }}></div>
       </div>
+    </div>
+
+    {/* SUBJECT WISE ATTENDANCE */}
+    <div style={{ marginTop: "45px" }}>
+
+      <div className="section-heading">
+        <div className="badge">SUBJECT PERFORMANCE</div>
+
+        <h2>
+          Subject-wise <span>Attendance</span>
+        </h2>
+
+        <p>
+          Monitor your attendance in every subject.
+        </p>
+      </div>
+
+      <div className="features-grid">
+
+        {/* DATA STRUCTURES */}
+        <div className="feature-card">
+          <div className="feature-icon purple">💻</div>
+          <h3>Data Structures</h3>
+          <p>Present: 22 / 25 classes</p>
+          <h2>88%</h2>
+
+          <div className="progress-bar">
+            <div style={{ width: "88%" }}></div>
+          </div>
+
+          <small style={{ display: "block", marginTop: "12px" }}>
+            🟢 Good attendance
+          </small>
+        </div>
+
+        {/* DBMS */}
+        <div className="feature-card">
+          <div className="feature-icon blue">🗄️</div>
+          <h3>DBMS</h3>
+          <p>Present: 21 / 26 classes</p>
+          <h2>81%</h2>
+
+          <div className="progress-bar">
+            <div style={{ width: "81%" }}></div>
+          </div>
+
+          <small style={{ display: "block", marginTop: "12px" }}>
+            🟢 Good attendance
+          </small>
+        </div>
+
+        {/* OPERATING SYSTEM */}
+        <div className="feature-card">
+          <div className="feature-icon pink">⚙️</div>
+          <h3>Operating System</h3>
+          <p>Present: 19 / 24 classes</p>
+          <h2>79%</h2>
+
+          <div className="progress-bar">
+            <div style={{ width: "79%" }}></div>
+          </div>
+
+          <small style={{ display: "block", marginTop: "12px" }}>
+            🟡 Need attention
+          </small>
+        </div>
+
+        {/* COMPUTER NETWORKS */}
+        <div className="feature-card">
+          <div className="feature-icon green">🌐</div>
+          <h3>Computer Networks</h3>
+          <p>Present: 21 / 25 classes</p>
+          <h2>84%</h2>
+
+          <div className="progress-bar">
+            <div style={{ width: "84%" }}></div>
+          </div>
+
+          <small style={{ display: "block", marginTop: "12px" }}>
+            🟢 Good attendance
+          </small>
+        </div>
+
+        {/* MATHEMATICS */}
+        <div className="feature-card">
+          <div className="feature-icon orange">📐</div>
+          <h3>Mathematics</h3>
+          <p>Present: 18 / 23 classes</p>
+          <h2>78%</h2>
+
+          <div className="progress-bar">
+            <div style={{ width: "78%" }}></div>
+          </div>
+
+          <small style={{ display: "block", marginTop: "12px" }}>
+            🟡 Need attention
+          </small>
+        </div>
+
+      </div>
+
     </div>
 
   </section>
