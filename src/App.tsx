@@ -7,6 +7,7 @@ function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState("");
+  const [activePage, setActivePage] = useState("dashboard");
   
   const handleLogin = () => {
     if (email === "student@campusos.com" && password === "123456") {
@@ -38,6 +39,21 @@ function App() {
         </nav>
 
         <main>
+          <div style={{ marginBottom: "30px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
+  <button
+    className="secondary-btn"
+    onClick={() => setActivePage("dashboard")}
+  >
+    🏠 Dashboard
+  </button>
+
+  <button
+    className="secondary-btn"
+    onClick={() => setActivePage("attendance")}
+  >
+    📊 Attendance
+  </button>
+</div>
           <section className="hero">
             <div className="hero-content">
               <div className="badge">
@@ -184,6 +200,58 @@ function App() {
 
       {/* HERO */}
       <main>
+        {activePage === "attendance" ? (
+  <section className="section">
+    <div className="section-heading">
+      <div className="badge">ACADEMIC OVERVIEW</div>
+
+      <h2>
+        Your <span>Attendance</span>
+      </h2>
+
+      <p>
+        Track your subject-wise attendance and academic performance.
+      </p>
+    </div>
+
+    <div className="features-grid">
+
+      <div className="feature-card">
+        <div className="feature-icon purple">📊</div>
+        <h3>Overall Attendance</h3>
+        <p>Your current overall attendance</p>
+        <h2>82%</h2>
+      </div>
+
+      <div className="feature-card">
+        <div className="feature-icon blue">✓</div>
+        <h3>Present Classes</h3>
+        <p>Total classes attended</p>
+        <h2>82</h2>
+      </div>
+
+      <div className="feature-card">
+        <div className="feature-icon pink">✕</div>
+        <h3>Absent Classes</h3>
+        <p>Total classes missed</p>
+        <h2>18</h2>
+      </div>
+
+    </div>
+
+    <div className="progress-card" style={{ marginTop: "30px" }}>
+      <div className="card-title">
+        <span>Overall Attendance</span>
+        <span>82%</span>
+      </div>
+
+      <div className="progress-bar">
+        <div style={{ width: "82%" }}></div>
+      </div>
+    </div>
+
+  </section>
+) : (
         <section className="hero">
 
           <div className="hero-content">
@@ -345,6 +413,7 @@ function App() {
 
         </section>
 
+)}
         {/* FEATURES */}
         <section
           id="features"
