@@ -515,7 +515,6 @@ function App() {
  const navigate = (page: Page) => {
   setActivePage(page);
 };
-
   if (isLoggedIn) {
     return (
       <div className="app-shell logged-app">
