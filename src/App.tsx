@@ -512,20 +512,9 @@ function App() {
     setActivePage("dashboard");
   };
 
-  const navigate = (page: Page) => {
-    setActivePage(page);
-  };
-
-  const pageTitle =
-    activePage === "dashboard"
-      ? "Dashboard"
-      : activePage === "attendance"
-      ? "Attendance"
-      : activePage === "assignments"
-      ? "Assignments"
-      : activePage === "timetable"
-      ? "Timetable"
-      : "Notices";
+ const navigate = (page: Page) => {
+  setActivePage(page);
+};
 
   if (isLoggedIn) {
     return (
